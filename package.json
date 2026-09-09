@@ -5,7 +5,7 @@
 	"type": "commonjs",
 	"main": "/bin/www",
 	"private": true,
-	"author": "Tekisho (https://github.com/Tekisho)",
+	"author": "Tekisho (https://github.com/tekisho)",
 	"license": "MIT",
 	"keywords": [
 		"express",
