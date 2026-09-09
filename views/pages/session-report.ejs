@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<%- include('../partials/_head.ejs') %>
+
+	<body>
+		<div class="wrapper">
+			<%- include('../partials/_header.ejs') %>
+
+			<main class="main">
+				<div class="section-main session-report">
+                    <div class="content-wrapper session-report-form__wrapper">
+						<div class="session-report-form__content">
+							<h1 class="section-main__title">Session Report Form</h1>
+							<div class="form__container">
+								<form
+									action="/session/report"
+									method="post"
+									class="form report-form"
+								>
+									<div class="form__section">
+										<div class="form__section-block">
+											<div class="form__block">
+												<label for="">Person Name</label>
+												<input
+													type="text"
+													name="name"
+													placeholder="Ray Blackwood"
+												/>
+											</div>
+
+											<div class="form__block">
+												<label for="">From Date</label>
+												<input
+													type="text" 
+													name="fromDate"
+													placeholder="dd / mm / yyyy"
+												/>
+											</div>
+
+											<div class="form__block">
+												<label for="">To Date</label>
+												<input
+													type="text" 
+													name="toDate"
+													placeholder="dd / mm / yyyy"
+												/>
+											</div>											
+										</div>
+									</div>
+
+									<button type="submit" class="button">Create Report</button>
+
+								</form>
+							</div>
+						</div>
+				</div>
+			</main>
+
+			<%- include('../partials/_footer.ejs') %>
+		</div>
+		<script src="/javascripts/navigation.js"></script>
+	</body>
+</html>

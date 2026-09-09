@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/_head.ejs') %>
+    <body>
+        <div class="wrapper error-wrapper">
+            <div class="error__content container">
+                <div class="error-block">
+                    <img src="/images/server-error.png" alt="" draggable="false" class="error-image undraggable">
+                    <div class="error-text-block">
+                        <h1 class="error-message"><%= message %> <span class="error-status"><%= status %></span></h1>
+                    </div>
+                    <div class="error-text">Oops, looks like <strong>something went wrong</strong>.</div>
+                </div>
+                
+                <div class="error__actions">
+                    <a href="/" class="button error__button">Return to Home</a>
+                    <a href="/support" class="button error__button">Contact Support</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

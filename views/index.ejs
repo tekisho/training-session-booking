@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <%- include('partials/_head.ejs') %>
+
+  <body>
+    <div class="wrapper">
+      <%- include('partials/_header.ejs') %>
+
+      <main class="main">
+        <section class="section-main booking-promo">
+          <div class="content-wrapper booking-promo__wrapper">
+            <div class="text-block">
+              <h1 class="section-main__title booking-promo__title">
+                <span class="text-higlight">T</span>raining 
+                <span class="text-higlight">S</span>ession 
+                <span class="text-higlight">B</span>ooking
+              </h1>
+              <p class="section-main__caption booking-promo__caption">The most convenient service for booking training sessions!</p>
+            </div>
+            <div class="booking-promo__actions">
+              <a href="/session/booking" class="button booking-promo__button">Book Session</a>
+              <a href="/session/list" class="button booking-promo__button">Track Sessions</a>
+            </div>
+          </div>
+        </section>
+        <section class="support-links">
+          <div class="content-wrapper support-links__wrapper">
+            <div class="text-block">
+              <h1 class="section-main__title support-links__title">Are you confused or need help?</h1>
+              <p class="section-main__caption support-links__caption">Don't worry, just use our resources, where you can get support and more information.</p>
+            </div>
+            <div class="support-links__actions">
+              <a href="/about-us" class="button support-links__button">Learn about us</a>
+              <a href="/support" class="button support-links__button">Get support</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <%- include('partials/_footer.ejs') %>
+    </div>
+
+    <script src="/javascripts/navigation.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<%- include('../partials/_head.ejs') %>
+	<body>
+		<div class="wrapper">
+			<%- include('../partials/_header.ejs') %>
+
+			<main class="main">
+				<div class="session-list">
+					<div class="report-info-container">
+						<div class="report-info-container__item"><strong>Person Name:</strong> <%= reportData.personName %></div>
+						<div class="report-info-container__item-block">
+							<div class="report-info-container__item"><strong>From:</strong> <%= reportData.initialDate.toLocaleDateString('en-IR') %></div>
+							<div class="report-info-container__item"><strong>To:</strong> <%= reportData.finalDate.toLocaleDateString('en-IR') %></div>
+						</div>
+					</div>
+
+					<% if (sessions.length < 1) { %>
+					<div class="session-list__report-message">
+						<div class="session-list__message-content">
+							Hah >;3, looks like
+							<strong>there are no sessions</strong> in this range :d...
+						</div>
+					</div>
+					<% } else { %> 
+					<div class="card-container">
+						<% sessions.forEach(session => { %>
+						<div class="session-card">
+							<div class="session-card-content">
+								<div class="session-card-content__header"><strong>Id:</strong> <%= session.personId %></div>
+								<div class="session-card-content__text">
+									<ul class="session-card-text__list">
+										<li><strong>Name:</strong> <%= session.name %></li>
+										<li><strong>Date:</strong> <%= session.date.toLocaleDateString('en-IR') %></li>
+										<li><strong>Created at:</strong> <%= session.createdAt.toLocaleString('en-IR') %></li>
+										<% if (session.createdAt.getTime() !== session.updatedAt.getTime()) { %>
+											<li><strong>Updated at:</strong> <%= session.updatedAt.toLocaleString('en-IR') %></li>
+										<% } %>
+									</ul>
+								</div>
+								<div class="session-card-content__button-block">
+									<button class="button button-delete" data-person-id="<%= session.personId %>">Delete</button>
+									<a class="button undraggable" href="/session/modify/<%= session.personId %>" draggable="false">Modify</a>
+								</div>
+							</div>
+						</div>
+						<% }); %>
+					</div>
+					<% } %>
+					<a href="/session/report" class="button session-list__report-button">Go Back</a>
+				</div>
+			</main>
+
+			<%- include('../partials/_footer.ejs') %>
+		</div>
+		<script src="/javascripts/navigation.js"></script>
+		<script src="/javascripts/sessionListDeleteHandler.js"></script>
+	</body>
+</html>

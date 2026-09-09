@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<%- include('../partials/_head.ejs') %>
+	<body>
+		<div class="wrapper">
+			<%- include('../partials/_header.ejs') %>
+			<main class="main">
+				<section class="section-main booking-registration">
+					<video autoplay muted loop class="section-video">
+  						<source src="/videos/gym.mp4" type="video/mp4">
+					</video>
+					<div class="content-wrapper booking-form__wrapper">
+						<div class="booking-form__content">
+							<h1 class="section-main__title">Session Registration Form</h1>
+							<div class="form__container">
+								<form
+									action="/session/create"
+									method="post"
+									class="form booking-form"
+								>
+									<div class="form__section">
+										<div class="form__section-block">
+											<div class="form__block">
+												<label for="">Person Name</label>
+												<input
+													type="text"
+													name="name"
+													placeholder="Ray Blackwood"
+												/>
+											</div>
+
+											<div class="form__block">
+												<label for="">Training Date</label>
+												<input
+													type="text" 
+													name="trainingDate"
+													placeholder="dd / mm / yyyy"
+												/>
+											</div>
+										</div>
+										<div class="form__section-block">
+											<div class="form__block">
+												<label for="">Card Number</label>
+												<input 
+													type="text"
+													name="cardNumber" 
+													placeholder="0000 0000 0000 0000"
+												/>
+											</div>
+
+											<div class="form__block">
+												<label for="">Expiry Date</label>
+												<input
+													type="text"
+													name="cardExpiryDate" 
+													placeholder="mm / yyyy"
+												/>
+											</div>
+
+											<div class="form__block">
+												<label for="">Secure Code</label>
+												<input
+													type="text"
+													name="cardSecureCode"
+													placeholder="123"
+												/>
+											</div>
+										</div>
+									</div>
+
+									<button type="submit" class="button">Confirm</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<%- include('../partials/_footer.ejs') %>
+		</div>
+		<script src="/javascripts/navigation.js"></script>
+	</body>
+</html>
