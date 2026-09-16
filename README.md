@@ -37,4 +37,4 @@ npm start
 
 # License
 
-[MIT](LICENSE.md) :O.
+[MIT](https://choosealicense.com/licenses/mit/), familiarize yourself with [license file](LICENSE.md) for more information :O.
